@@ -20,6 +20,7 @@ export default function RootLayout() {
   useEffect(() => {
     if (loaded) {
       SplashScreen.hideAsync();
+      
     }
   }, [loaded]);
 
@@ -31,6 +32,7 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
       <Stack>
         <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+        <Stack.Screen name="test"  />
         <Stack.Screen name="+not-found" />
       </Stack>
       <StatusBar style="auto" />
